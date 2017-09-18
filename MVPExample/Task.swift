@@ -8,12 +8,15 @@
 
 import Foundation
 
+/// Task status
 enum TaskStatus {
     case Created
     case Completed
     case InProgress
 }
 
+
+/// Model representing single task
 struct Task {
     let title: String
     let description: String

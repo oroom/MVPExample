@@ -8,12 +8,14 @@
 
 import Foundation
 
+/// MVP Presenter requirements
 protocol Presenter: class {
     
     associatedtype PresentedView: View
     func attachView(view: PresentedView)
 }
 
+/// Wrapper for type erasure
 class AnyPresenter<TView: View>: Presenter {
     typealias PresentedView = TView
     private let _attachView: (TView) -> (Void)
@@ -29,6 +31,7 @@ class AnyPresenter<TView: View>: Presenter {
 
 }
 
+/// Base class for all presenters
 class BasePresenter<V: View>: Presenter {
     private weak var view: V?
     

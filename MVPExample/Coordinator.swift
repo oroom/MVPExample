@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// class which cordinates MVP modules
 protocol Coordinator: class {
     var childCoordinators: [Coordinator] { get }
     

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Root coordinator for application
 class AppCoordinator : BaseCoordinator {
     
     let window: UIWindow
