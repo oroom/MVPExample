@@ -10,15 +10,14 @@ import UIKit
 
 final class TasksListViewController: UIViewController, TasksListView {
     
-    var viewPresenter: AnyPresenter<TasksListViewController>!
-    var presenter: TasksListPresenter!
+    var presenter: (TasksListPresenter & BasePresenter<TasksListViewController>)?
     
     private let taskTitle = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        viewPresenter.attachView(view: self)
+        presenter?.attachView(view: self)
         self.setupUI()
     }
 

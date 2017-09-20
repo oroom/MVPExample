@@ -14,11 +14,8 @@ protocol TasksListConfigurator {
 
 struct TasksListConfiguratorImpl: TasksListConfigurator {
     func configure(view: TasksListViewController) {
-        //Type erasure used to clean type information
         let presenter = TasksListPresenterImpl<TasksListViewController>()
-        let viewPresenter = AnyPresenter(presenter: presenter)
         view.presenter = presenter
-        view.viewPresenter = viewPresenter
     }
 }
 
