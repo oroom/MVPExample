@@ -19,6 +19,9 @@ class AppCoordinator : BaseCoordinator {
     }
     
     override func start() {
+        let confugurator = AppConfiguration(configurationProvider: AuthService())
+        confugurator.reconfigureApp()
+        
         let taskList = TasksListViewController()
         TasksListConfiguratorImpl().configure(view: taskList)
         window.rootViewController = taskList

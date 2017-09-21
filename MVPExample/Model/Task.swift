@@ -10,9 +10,9 @@ import Foundation
 
 /// Task status
 enum TaskStatus {
-    case Created
-    case Completed
-    case InProgress
+    case created
+    case completed
+    case inProgress
 }
 
 

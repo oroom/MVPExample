@@ -11,7 +11,7 @@ import Foundation
 final class TasksListPresenterImpl<V: TasksListView>: BasePresenter<V>, TasksListPresenter {
     
     public func getTasks() -> [Task] {
-        return [Task(title: "Title", description: "Description", taskStatus: .Created, createdDate: Date())]
+        return [Task(title: "Title", description: "Description", taskStatus: .created, createdDate: Date())]
     }
     
     override func attachView(view: V) {
