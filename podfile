@@ -1,0 +1,18 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+def libraries
+    pod 'Moya'
+    pod 'Alamofire'
+end
+
+target 'MVPExample' do
+	platform :ios, '10.0'
+	libraries
+end
+
+target 'MVPExampleTests' do
+	platform :ios, '10.0'
+	libraries
+end
