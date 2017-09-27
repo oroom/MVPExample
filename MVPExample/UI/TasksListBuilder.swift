@@ -1,11 +1,3 @@
-//
-//  TasksListBuilder.swift
-//  MVPExample
-//
-//  Created by oroom on 9/18/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import Foundation
 
 protocol TasksListConfigurator {
@@ -13,9 +5,22 @@ protocol TasksListConfigurator {
 }
 
 struct TasksListConfiguratorImpl: TasksListConfigurator {
+    let appConfig: AppConfiguration
+    
+    init(appConfig: AppConfiguration) {
+        self.appConfig = appConfig
+    }
+    
     func configure(view: TasksListViewController) {
-        let presenter = TasksListPresenterImpl<TasksListViewController>()
+        let taskService = TaskServiceImpl(tokenClosure: self.tokenClosure)
+        let presenter = TasksListPresenterImpl<TasksListViewController>(taskService: taskService)
         view.presenter = presenter
     }
+    
+    private func tokenClosure() -> String {
+        guard let token = self.appConfig.apiToken else {
+            return ""
+        }
+        return token
+    }
 }
-

@@ -1,15 +1,7 @@
-//
-//  TasksService.swift
-//  MVPExample
-//
-//  Created by oroom on 9/21/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import Foundation
 import Moya
 
-enum TasksService {
+enum TasksEndpoints {
     case applicationAuthentification(appId: Int, signature: String, authKey: String, timestamp: Int, nonce: Int)
     case getTasks
     
@@ -20,7 +12,7 @@ enum TasksService {
 }
 
 // MARK: TargetType protocol implementation
-extension TasksService: TargetType, QBTokenAuthorizable {
+extension TasksEndpoints: TargetType, QBTokenAuthorizable {
     
     var baseURL: URL { return   URL(string: "https://api.quickblox.com")!}
     
@@ -29,7 +21,7 @@ extension TasksService: TargetType, QBTokenAuthorizable {
         case .applicationAuthentification(_, _, _, _, _):
             return "/session.json"
         case .getTasks:
-            return "/Task.json"
+            return "/data/Task.json"
         }
     }
     

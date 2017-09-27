@@ -1,14 +1,13 @@
-//
-//  TasksListViewController.swift
-//  MVPExample
-//
-//  Created by oroom on 9/14/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import UIKit
 
 final class TasksListViewController: UIViewController, TasksListView {
+    func showError() {
+        // TODO: show error message
+    }
+    
+    func showEmpty() {
+        // TODO: show empty message
+    }
     
     var presenter: (TasksListPresenter & BasePresenter<TasksListViewController>)?
     

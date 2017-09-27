@@ -1,11 +1,3 @@
-//
-//  AppConfiguration.swift
-//  MVPExample
-//
-//  Created by oroom on 9/21/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import Foundation
 
 class AppConfiguration {
@@ -16,12 +8,13 @@ class AppConfiguration {
         self.configurationProvider = configurationProvider
     }
     
-    func reconfigureApp() {
+    func reconfigureApp(completion: @escaping () -> ()) {
         self.configurationProvider.renewToken { [weak self] (token) in
             guard let token = token else {
                 return
             }
             self?.apiToken = token
+            completion()
         }
     }
 }

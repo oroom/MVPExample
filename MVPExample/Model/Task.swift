@@ -1,25 +1,35 @@
-//
-//  Task.swift
-//  MVPExample
-//
-//  Created by oroom on 9/18/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import Foundation
 
 /// Task status
-enum TaskStatus {
+/// Task status
+enum TaskStatus: Int, Codable {
     case created
     case completed
     case inProgress
 }
 
-
 /// Model representing single task
-struct Task {
+struct Task: Codable {
     let title: String
     let description: String
-    let taskStatus: TaskStatus
-    let createdDate: Date
+    let status: TaskStatus
+    let updated: Date
+}
+
+struct TasksList: Codable {
+    let items: [Task]
+}
+
+struct TasksPage: Codable {
+    let className: String
+    let skip: Int
+    let limit: Int
+    let items: [Task]
+    
+    enum CodingKeys: String, CodingKey {
+        case className = "class_name"
+        case skip
+        case limit
+        case items
+    }
 }

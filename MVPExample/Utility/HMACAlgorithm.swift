@@ -1,10 +1,3 @@
-//
-//  HMACSHA.swift
-//  MVPExample
-//
-//  Created by oroom on 9/21/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
 import Foundation
 
 /// usage: let hmacResult: String = HMACAlgorithm.SHA1(body: "myStringToHMAC", key: "foo")

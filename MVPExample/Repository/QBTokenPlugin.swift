@@ -1,11 +1,3 @@
-//
-//  QBTokenPlugin.swift
-//  MVPExample
-//
-//  Created by oroom on 9/21/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import Moya
 
 // MARK: - QBTokenAuthorizable
@@ -42,7 +34,7 @@ public struct QBTokenPlugin: PluginType {
      - parameters:
      - tokenClosure: A closure returning the token to be applied in the pattern `Authorization: <AuthorizationType> <token>`
      */
-    public init(tokenClosure: @escaping @autoclosure () -> String) {
+    public init(tokenClosure: @escaping () -> String) {
         self.tokenClosure = tokenClosure
     }
     

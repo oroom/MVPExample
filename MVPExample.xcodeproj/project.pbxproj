@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89AD6CC50CC59535F248E8B4 /* Pods_MVPExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4571BB7DDC0D79BF893CAD90 /* Pods_MVPExampleTests.framework */; };
-		D320A78A1F73C0B30030EBD4 /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320A7891F73C0B30030EBD4 /* TasksService.swift */; };
+		D320A78A1F73C0B30030EBD4 /* TasksEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320A7891F73C0B30030EBD4 /* TasksEndpoints.swift */; };
 		D320A78C1F73CE130030EBD4 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320A78B1F73CE130030EBD4 /* AppConfiguration.swift */; };
 		D320A78E1F73D0D10030EBD4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320A78D1F73D0D10030EBD4 /* AuthService.swift */; };
 		D320A7901F73D1130030EBD4 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320A78F1F73D1130030EBD4 /* TokenProvider.swift */; };
@@ -30,6 +30,7 @@
 		D35B45191F6FB618006A859D /* TasksListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B45181F6FB618006A859D /* TasksListPresenter.swift */; };
 		D35B451B1F6FBF2B006A859D /* TasksListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B451A1F6FBF2B006A859D /* TasksListBuilder.swift */; };
 		D35B451D1F6FE0DC006A859D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B451C1F6FE0DC006A859D /* Task.swift */; };
+		D3C4B4901F799EEA00D1B1B4 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */; };
 		F9212272F59E87B63F289D77 /* Pods_MVPExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3535A24CDC8DC5FFA60C2FC6 /* Pods_MVPExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +58,7 @@
 		4B9CC1E248714EAF449B31CA /* Pods-MVPExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVPExample/Pods-MVPExample.release.xcconfig"; sourceTree = "<group>"; };
 		ABEE6D478B6E0C59B3CE4A7A /* Pods-MVPExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPExample/Pods-MVPExample.debug.xcconfig"; sourceTree = "<group>"; };
 		B3F41DFF30E228E5B4BE1D5A /* Pods-MVPExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVPExampleTests/Pods-MVPExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D320A7891F73C0B30030EBD4 /* TasksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
+		D320A7891F73C0B30030EBD4 /* TasksEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksEndpoints.swift; sourceTree = "<group>"; };
 		D320A78B1F73CE130030EBD4 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		D320A78D1F73D0D10030EBD4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D320A78F1F73D1130030EBD4 /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		D35B45181F6FB618006A859D /* TasksListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksListPresenter.swift; sourceTree = "<group>"; };
 		D35B451A1F6FBF2B006A859D /* TasksListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksListBuilder.swift; sourceTree = "<group>"; };
 		D35B451C1F6FE0DC006A859D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +140,10 @@
 		D320A7841F73C03F0030EBD4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				D320A7891F73C0B30030EBD4 /* TasksService.swift */,
+				D320A7891F73C0B30030EBD4 /* TasksEndpoints.swift */,
 				D320A78D1F73D0D10030EBD4 /* AuthService.swift */,
 				D320A7971F7402840030EBD4 /* QBTokenPlugin.swift */,
+				D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				D3499E3A1F6B0BCD0070095B /* Presenter.swift in Sources */,
 				D35B451D1F6FE0DC006A859D /* Task.swift in Sources */,
 				D35B451B1F6FBF2B006A859D /* TasksListBuilder.swift in Sources */,
+				D3C4B4901F799EEA00D1B1B4 /* TaskService.swift in Sources */,
 				D35B45171F6FB606006A859D /* TasksListContract.swift in Sources */,
 				D3499E351F6AD1270070095B /* AppCoordinator.swift in Sources */,
 				D3499E091F6ACE070070095B /* MVPExample.xcdatamodeld in Sources */,
@@ -519,7 +523,7 @@
 				D3499E011F6ACE070070095B /* AppDelegate.swift in Sources */,
 				D320A7981F7402840030EBD4 /* QBTokenPlugin.swift in Sources */,
 				D320A7901F73D1130030EBD4 /* TokenProvider.swift in Sources */,
-				D320A78A1F73C0B30030EBD4 /* TasksService.swift in Sources */,
+				D320A78A1F73C0B30030EBD4 /* TasksEndpoints.swift in Sources */,
 				D3499E3E1F6B0D2E0070095B /* BaseCoordinator.swift in Sources */,
 				D320A78E1F73D0D10030EBD4 /* AuthService.swift in Sources */,
 				D320A78C1F73CE130030EBD4 /* AppConfiguration.swift in Sources */,

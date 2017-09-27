@@ -1,24 +1,34 @@
-//
-//  TasksListPresenter.swift
-//  MVPExample
-//
-//  Created by oroom on 9/18/17.
-//  Copyright © 2017 oroom. All rights reserved.
-//
-
 import Foundation
 
 final class TasksListPresenterImpl<V: TasksListView>: BasePresenter<V>, TasksListPresenter {
     
-    public func getTasks() -> [Task] {
-        return [Task(title: "Title", description: "Description", taskStatus: .created, createdDate: Date())]
+    let taskService: TaskService
+    
+    init(taskService: TaskService) {
+        self.taskService = taskService
+        super.init()
+    }
+
+    public func getTasks() {
+        taskService.getTasks(completion: self.process)
+    }
+    
+    private func process(tasks: [Task]?) {
+        if let tasks = tasks {
+            if tasks.count == 0 {
+                view.showEmpty()
+            }
+            else {
+                view.showTasks(tasks: tasks)
+            }
+        }
+        else {
+            view.showError()
+        }
     }
     
     override func attachView(view: V) {
         super.attachView(view: view)
-        view.showTasks(tasks: getTasks())
+        getTasks()
     }
-    
 }
-
-
