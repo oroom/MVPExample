@@ -31,6 +31,8 @@
 		D35B451B1F6FBF2B006A859D /* TasksListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B451A1F6FBF2B006A859D /* TasksListBuilder.swift */; };
 		D35B451D1F6FE0DC006A859D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B451C1F6FE0DC006A859D /* Task.swift */; };
 		D3C4B4901F799EEA00D1B1B4 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */; };
+		D3CC7BDF1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC7BDE1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift */; };
+		D3CC7BE41F7BCF0B008C2CC2 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC7BE31F7BCF0B008C2CC2 /* TaskCell.swift */; };
 		F9212272F59E87B63F289D77 /* Pods_MVPExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3535A24CDC8DC5FFA60C2FC6 /* Pods_MVPExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		D35B451A1F6FBF2B006A859D /* TasksListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksListBuilder.swift; sourceTree = "<group>"; };
 		D35B451C1F6FE0DC006A859D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		D3CC7BDE1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListCollectionViewSAdapter.swift; sourceTree = "<group>"; };
+		D3CC7BE31F7BCF0B008C2CC2 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,10 +184,7 @@
 		D320A7881F73C0870030EBD4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D3499E021F6ACE070070095B /* TasksListViewController.swift */,
-				D35B45161F6FB606006A859D /* TasksListContract.swift */,
-				D35B45181F6FB618006A859D /* TasksListPresenter.swift */,
-				D35B451A1F6FBF2B006A859D /* TasksListBuilder.swift */,
+				D3CC7BE21F7BCEE0008C2CC2 /* TasksList */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -253,6 +254,19 @@
 				D3499E251F6ACE070070095B /* Info.plist */,
 			);
 			path = MVPExampleUITests;
+			sourceTree = "<group>";
+		};
+		D3CC7BE21F7BCEE0008C2CC2 /* TasksList */ = {
+			isa = PBXGroup;
+			children = (
+				D3499E021F6ACE070070095B /* TasksListViewController.swift */,
+				D35B45161F6FB606006A859D /* TasksListContract.swift */,
+				D35B45181F6FB618006A859D /* TasksListPresenter.swift */,
+				D35B451A1F6FBF2B006A859D /* TasksListBuilder.swift */,
+				D3CC7BDE1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift */,
+				D3CC7BE31F7BCF0B008C2CC2 /* TaskCell.swift */,
+			);
+			path = TasksList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3499E3A1F6B0BCD0070095B /* Presenter.swift in Sources */,
+				D3CC7BE41F7BCF0B008C2CC2 /* TaskCell.swift in Sources */,
 				D35B451D1F6FE0DC006A859D /* Task.swift in Sources */,
 				D35B451B1F6FBF2B006A859D /* TasksListBuilder.swift in Sources */,
 				D3C4B4901F799EEA00D1B1B4 /* TaskService.swift in Sources */,
@@ -517,6 +532,7 @@
 				D3499E351F6AD1270070095B /* AppCoordinator.swift in Sources */,
 				D3499E091F6ACE070070095B /* MVPExample.xcdatamodeld in Sources */,
 				D3499E381F6B0BBC0070095B /* Coordinator.swift in Sources */,
+				D3CC7BDF1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift in Sources */,
 				D3499E031F6ACE070070095B /* TasksListViewController.swift in Sources */,
 				D320A7931F73D4340030EBD4 /* HMACAlgorithm.swift in Sources */,
 				D3499E3C1F6B0BDA0070095B /* View.swift in Sources */,

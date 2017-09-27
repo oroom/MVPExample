@@ -13,6 +13,10 @@ final class TasksListPresenterImpl<V: TasksListView>: BasePresenter<V>, TasksLis
         taskService.getTasks(completion: self.process)
     }
     
+    func taskSelected(task: Task) {
+        
+    }
+    
     private func process(tasks: [Task]?) {
         if let tasks = tasks {
             if tasks.count == 0 {

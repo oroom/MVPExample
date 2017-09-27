@@ -8,4 +8,5 @@ protocol TasksListView : View {
 
 protocol TasksListPresenter {
     func getTasks()
+    func taskSelected(task: Task)
 }
