@@ -77,7 +77,7 @@ extension TasksEndpoints: TargetType, QBTokenAuthorizable {
                    ]
                    }
                    """.utf8Encoded
-        case .applicationAuthentification(let appId,let signature,let authKey,let timestamp,let nonce):
+        case .applicationAuthentification(let appId, _, _, let timestamp, let nonce):
             return """
                    {"session":
                     {"application_id":\(appId),"created_at":"2017-09-21T09:09:13Z","id":374974178,"nonce":\(nonce),"token":"c4a16b9d4e37ad359fa3eeb81ab03fc92200f4bb","ts":\(timestamp),"updated_at":"2017-09-21T09:09:13Z","user_id":0,"_id":"374974178"

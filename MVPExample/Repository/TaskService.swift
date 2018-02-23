@@ -22,7 +22,7 @@ final class TaskServiceImpl: TaskService {
                 do {
                     // TODO: remove next line later
                     let data = try moyaResponse.filterSuccessfulStatusCodes().data
-                    let jsonString = String(data: data, encoding: .utf8)!
+                    _ = String(data: data, encoding: .utf8)!
                     let decoder = JSONDecoder()
                     decoder.dateDecodingStrategy = .iso8601
                     
@@ -38,7 +38,7 @@ final class TaskServiceImpl: TaskService {
                 catch {
                     completion(nil)
                 }
-            case let .failure(_):
+            case .failure(_):
                 completion(nil)
             }
         }

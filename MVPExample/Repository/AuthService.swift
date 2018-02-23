@@ -14,7 +14,7 @@ class AuthService: TokenProvider  {
             switch result {
                 case let .success(moyaResponse):
                 do {
-                    let str = String(data: moyaResponse.request!.httpBody!, encoding: .utf8)
+                    _ = String(data: moyaResponse.request!.httpBody!, encoding: .utf8)
                     try moyaResponse.filterSuccessfulStatusCodes()
                     let data = try moyaResponse.mapJSON() as! Dictionary<String,Any>
                     if let token = (data["session"] as! Dictionary<String,Any>)["token"] as? String {
@@ -25,7 +25,7 @@ class AuthService: TokenProvider  {
                 catch {
                     completion(nil)
                 }
-                case let .failure(error):
+            case .failure(_):
                     completion(nil)
             }
         }
