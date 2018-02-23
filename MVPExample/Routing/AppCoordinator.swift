@@ -1,13 +1,12 @@
 import Foundation
-import UIKit
 
 /// Root coordinator for application
 class AppCoordinator : BaseCoordinator {
     
-    let window: UIWindow
+    let router: AppRouter
     
-    init(window: UIWindow) {
-        self.window = window
+    init(router: AppRouter) {
+        self.router = router
     }
     
     override func start() {
@@ -15,8 +14,7 @@ class AppCoordinator : BaseCoordinator {
         confugurator.reconfigureApp(completion: {
             let taskList = TasksListViewController()
             TasksListConfiguratorImpl(appConfig: confugurator).configure(view: taskList)
-            self.window.rootViewController = taskList
-            self.window.makeKeyAndVisible()
+            self.router.showInWindow(viewController: taskList)
         })
     }
 }

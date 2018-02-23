@@ -2,6 +2,8 @@ import UIKit
 
 final class TasksListViewController: UIViewController, TasksListView {
     
+    let minSpacing: CGFloat = 5
+    
     var presenter: (TasksListPresenter & BasePresenter<TasksListViewController>)?
     let cellsReuseIdentifier = "tasksCell"
     private var adapter: TasksListCollectionViewAdapter!
@@ -19,6 +21,8 @@ final class TasksListViewController: UIViewController, TasksListView {
         adapter = TasksListCollectionViewAdapter(taskSelected: taskSelected, reuseIdentifier: cellsReuseIdentifier)
         tasksList.delegate = adapter
         tasksList.dataSource = adapter
+        
+        title = "Tasks"
     }
 
     // MARK: - TasksListView
@@ -41,10 +45,11 @@ final class TasksListViewController: UIViewController, TasksListView {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: self.view.frame.width - 32, height: 50)
-        flowLayout.minimumLineSpacing = 5
+        flowLayout.minimumLineSpacing = minSpacing
         tasksList = UICollectionView(frame: self.view.frame, collectionViewLayout: flowLayout)
         tasksList.register(TaskCell.self, forCellWithReuseIdentifier: cellsReuseIdentifier)
         tasksList.backgroundColor = UIColor.lightGray
+        tasksList.contentInset = UIEdgeInsetsMake(minSpacing, 0, 0, 0)
         self.view.backgroundColor = UIColor.lightGray
         
         self.addSubviews()

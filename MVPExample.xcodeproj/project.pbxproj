@@ -33,6 +33,7 @@
 		D3C4B4901F799EEA00D1B1B4 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */; };
 		D3CC7BDF1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC7BDE1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift */; };
 		D3CC7BE41F7BCF0B008C2CC2 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC7BE31F7BCF0B008C2CC2 /* TaskCell.swift */; };
+		DC88C81020405614004FEEE2 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC88C80F20405614004FEEE2 /* AppRouter.swift */; };
 		F9212272F59E87B63F289D77 /* Pods_MVPExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3535A24CDC8DC5FFA60C2FC6 /* Pods_MVPExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		D3C4B48F1F799EE900D1B1B4 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		D3CC7BDE1F7B9112008C2CC2 /* TasksListCollectionViewSAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListCollectionViewSAdapter.swift; sourceTree = "<group>"; };
 		D3CC7BE31F7BCF0B008C2CC2 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		DC88C80F20405614004FEEE2 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				D3499E341F6AD1270070095B /* AppCoordinator.swift */,
 				D3499E3D1F6B0D2E0070095B /* BaseCoordinator.swift */,
+				DC88C80F20405614004FEEE2 /* AppRouter.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				D320A7901F73D1130030EBD4 /* TokenProvider.swift in Sources */,
 				D320A78A1F73C0B30030EBD4 /* TasksEndpoints.swift in Sources */,
 				D3499E3E1F6B0D2E0070095B /* BaseCoordinator.swift in Sources */,
+				DC88C81020405614004FEEE2 /* AppRouter.swift in Sources */,
 				D320A78E1F73D0D10030EBD4 /* AuthService.swift in Sources */,
 				D320A78C1F73CE130030EBD4 /* AppConfiguration.swift in Sources */,
 				D35B45191F6FB618006A859D /* TasksListPresenter.swift in Sources */,
